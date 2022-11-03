@@ -4,7 +4,7 @@ def main():
     while(True):
         print("Hello World!")
         count += 1
-        if count == 100:
+        if count == 10:
             break
 
 if __name__ == "__main__":
