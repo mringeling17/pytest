@@ -1,0 +1,13 @@
+name: test github post from button
+
+on:
+  repository_dispatch:
+    types: run-event
+
+jobs:
+  build:
+    steps:
+      - uses: actions/checkout@v2
+      - name: Deploy and Run
+        run: |
+          python3 src/main.py
