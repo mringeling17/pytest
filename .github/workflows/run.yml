@@ -6,8 +6,10 @@ on:
 
 jobs:
   build:
+    runs-on: [ubuntu-22.04	]
+
     steps:
       - uses: actions/checkout@v2
       - name: Deploy and Run
         run: |
-          python3 src/main.py
+          python3 src/main.py  ${{ github.event.client_payload.start }}  ${{ github.event.client_payload.end }}
